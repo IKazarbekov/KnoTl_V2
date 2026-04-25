@@ -1,5 +1,3 @@
-from idlelib.mainmenu import menudefs
-
 from flask import Flask
 from app.controller.login_controller import main_bp as auth_bp
 from app.controller.menu_controller import main_bp as menu_bp
@@ -7,6 +5,7 @@ from app.model.user import User
 from core.extensions import db, login_manager
 
 app = Flask(__name__)
+application = app
 
 #sessings
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost:5432/mydb'
