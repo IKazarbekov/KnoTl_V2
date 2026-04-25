@@ -25,7 +25,13 @@ app.register_blueprint(menu_bp)
 # user loader
 @login_manager.user_loader
 def load_user(user_id):
-    return db.session.get(User, int(user_id))
+    #return db.session.get(User, int(user_id))
+    if not user_id is None and user_id != 'None':
+        if int(user_id) == 1:
+            bob = User()
+            bob.login = 'Bob'
+            return bob
+    return None
 
 if __name__ == '__main__':
     app.run()

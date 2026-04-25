@@ -1,6 +1,7 @@
 from flask import Blueprint, request, redirect
 from app.front import auth_page
-from app.repository.user_repo import UserRepository
+#from app.repository.user_repo import UserRepository
+from app.repository.mock_user_repo import UserRepository
 from flask_login import login_user, logout_user
 
 main_bp = Blueprint('auth', __name__, url_prefix='/auth')
