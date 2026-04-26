@@ -1,0 +1,1 @@
+dependencies: flask, flask_login, flask_sqlalchemy, pytest

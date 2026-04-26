@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8681044-5842-435d-b30e-4718c3d72ff8" name="Changes" comment="mock dada base">
+    <list default="true" id="c8681044-5842-435d-b30e-4718c3d72ff8" name="Changes" comment="add application = app">
+      <change afterPath="$PROJECT_DIR$/app/controller/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/repository/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/app_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/app/repository/test_user_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/login_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/login_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/menu_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/menu_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/front/auth_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/front/auth_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/mock_user_repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/mock_user_repo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +44,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for tests.app.repository.test_user_repository.test_find_not_exiting_user.executor": "Run",
+    "Python tests.Python tests in test_user_repository.py.executor": "Run",
     "Python.connect_to_bd.executor": "Run",
     "Python.database.executor": "Run",
     "Python.main.executor": "Run",
@@ -54,6 +66,28 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/core" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Python tests for tests.app.repository.test_user_repository.test_find_not_exiting_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="knotl" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.app.repository.test_user_repository.test_find_not_exiting_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for tests.app.repository.test_user_repository.test_find_not_exiting_user" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -86,12 +120,21 @@
       <option name="project" value="LOCAL" />
       <updated>1777125983986</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add application = app">
+      <option name="closed" value="true" />
+      <created>1777126532889</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777126532889</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add login" />
     <MESSAGE value="mock dada base" />
-    <option name="LAST_COMMIT_MESSAGE" value="mock dada base" />
+    <MESSAGE value="add application = app" />
+    <option name="LAST_COMMIT_MESSAGE" value="add application = app" />
   </component>
 </project>

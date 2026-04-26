@@ -1,17 +1,16 @@
 from flask import Blueprint, request, redirect
 from app.front import auth_page
 #from app.repository.user_repo import UserRepository
-from app.repository.mock_user_repo import UserRepository
+from app.repository import user_repo
 from flask_login import login_user, logout_user
 
-main_bp = Blueprint('auth', __name__, url_prefix='/auth')
-user_repo = UserRepository()
+auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
 
-@main_bp.route('/reg')
+@auth_bp.route('/reg')
 def register():
     return auth_page.login()
 
-@main_bp.route('/log')
+@auth_bp.route('/log')
 def login():
     args = request.args
     if 'lg' in args:
@@ -25,7 +24,7 @@ def login():
 
     return auth_page.login()
 
-@main_bp.route('/lgt')
+@auth_bp.route('/lgt')
 def logout():
     logout_user()
     return redirect('/auth/log')

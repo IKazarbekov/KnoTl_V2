@@ -1,8 +1,10 @@
 from app.model.user import User
 
-class UserRepository:
+class UserMockRepository:
 
     def get_by_id(self, user_id):
+        if user_id is None:
+            return None
         if int(user_id) == 1:
             bob = User()
             bob.id = 1
