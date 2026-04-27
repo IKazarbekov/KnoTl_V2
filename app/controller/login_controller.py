@@ -1,4 +1,4 @@
-from flask import Blueprint, request, redirect
+from flask import Blueprint, request, redirect, session
 from app.front import auth_page
 #from app.repository.user_repo import UserRepository
 from app.repository import user_repo
@@ -13,9 +13,15 @@ def register():
 @auth_bp.route('/log')
 def login():
     args = request.args
+
+    # login code
     if 'lg' in args:
         login = args['lg']
         user = user_repo.get_by_login(login)
+
+        if 'bm' in args:
+            session['bm'] = True
+
         if user:
             login_user(user)
             return redirect('/menu')
@@ -27,4 +33,5 @@ def login():
 @auth_bp.route('/lgt')
 def logout():
     logout_user()
+    session.clear()
     return redirect('/auth/log')
