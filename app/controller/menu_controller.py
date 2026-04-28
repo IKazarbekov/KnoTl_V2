@@ -10,4 +10,4 @@ def root():
     is_but_mode = False
     if 'bm' in session:
         is_but_mode = session['bm']
-    return start_menu(current_user.login, is_but_mode)
+    return start_menu(current_user.name, is_but_mode)

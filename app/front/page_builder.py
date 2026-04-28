@@ -163,7 +163,7 @@ class InputPageObject(PageObject):
         pass
 
 class Form(PageObject):
-    def __init__(self, inputs: list[PageObject|list[PageObject]], title: str = '', button_title = 'Отправить', url: str = None):
+    def __init__(self, inputs: list[PageObject|list[PageObject]], title: str = '', button_title = 'Отправить', url: str = None, is_post_method: bool = False):
         """
 
         :param inputs: list from line or PageObject
@@ -176,7 +176,9 @@ class Form(PageObject):
         self.inputs = inputs
         self.title = title
         self.button_title = button_title
-        self.is_post_method = any(isinstance(inp, FileBox) for inp in inputs)
+        self.is_post_method = is_post_method
+        if is_post_method == False:
+            self.is_post_method = any(isinstance(inp, FileBox) for inp in inputs)
 
     def get_html(self) -> str:
         form = str()

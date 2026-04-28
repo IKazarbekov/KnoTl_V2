@@ -16,8 +16,8 @@ def test_add_and_find_user(app, session):
     assert real_user.password == find_user.password
     assert real_user.id == find_user.id
 
-def test_find_not_exiting_user(app, session):
-    user_repo = UserRepository()
+def test_find_not_exiting_user(app, session, database):
+    user_repo = UserRepository(database)
 
     find_user = user_repo.get_by_id(999)
 

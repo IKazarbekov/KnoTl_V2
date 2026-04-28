@@ -4,25 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8681044-5842-435d-b30e-4718c3d72ff8" name="Changes" comment="add pytest for test class UserRepository from app/repository/user_repo">
-      <change afterPath="$PROJECT_DIR$/app/controller/error_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/front/page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/front/page_builder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/modul/chat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/modul/language.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/modul/optimizator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/old/tictactoe.py" afterDir="false" />
+    <list default="true" id="c8681044-5842-435d-b30e-4718c3d72ff8" name="Changes" comment="add old server">
+      <change afterPath="$PROJECT_DIR$/app/service/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/login_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/login_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/menu_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/menu_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/front/auth_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/front/auth_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/front/menu_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/front/menu_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/front/page_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/front/page_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/user_repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/user_repo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/app_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/extensions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/app/repository/test_user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/app/repository/test_user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,25 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for tests.app.repository.test_user_repository.test_find_not_exiting_user.executor": "Run",
-    "Python tests.Python tests in test_user_repository.py.executor": "Run",
-    "Python.Server.executor": "Run",
-    "Python.connect_to_bd.executor": "Run",
-    "Python.database.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.page_builder.executor": "Run",
-    "Python.user.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/ikazarbekov/Документы/projects/BIG_PROJECTS/knotl/app/old",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for tests.app.repository.test_user_repository.test_find_not_exiting_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_user_repository.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.connect_to_bd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.database.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.page_builder.executor&quot;: &quot;Run&quot;,
+    &quot;Python.user.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ikazarbekov/Документы/projects/BIG_PROJECTS/knotl/app/old&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/old" />
@@ -171,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777186705643</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add old server">
+      <option name="closed" value="true" />
+      <created>1777262584608</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777262584608</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -179,6 +183,7 @@
     <MESSAGE value="mock dada base" />
     <MESSAGE value="add application = app" />
     <MESSAGE value="add pytest for test class UserRepository from app/repository/user_repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pytest for test class UserRepository from app/repository/user_repo" />
+    <MESSAGE value="add old server" />
+    <option name="LAST_COMMIT_MESSAGE" value="add old server" />
   </component>
 </project>

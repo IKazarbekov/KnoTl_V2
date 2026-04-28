@@ -1,11 +1,16 @@
 from app.front import page_builder as pb
 
-def login() -> str:
+def get(error: str = '') -> str:
     '''
     login page
     :return: str page
     '''
     return pb.create_page([
+        pb.Card('Аунтификация',[
+            pb.Label(error, color='red'),
+            pb.UrlCard('Вход', 'l'),
+            pb.UrlCard('Регистрация', 'r')
+        ]),
         pb.Card('Вход', [
             pb.Form([
                 pb.Label('Логин'),
@@ -16,6 +21,20 @@ def login() -> str:
                     pb.Label('Кнопочный телефон'),
                     pb.CheckBox('bm')
                 ]
-            ])
-        ])
+            ], is_post_method=True, url='log')
+        ], id='l'),
+        pb.Card('Регистрация', [
+            pb.Form([
+                pb.Label('Логин'),
+                pb.TextBox('lg'),
+                pb.Label('Имя'),
+                pb.TextBox('nm'),
+                pb.Label('Почта'),
+                pb.TextBox('ml'),
+                pb.Label('Пароль'),
+                pb.TextBox('pw1'),
+                pb.Label('Пароль(ещё раз)'),
+                pb.TextBox('pw2'),
+            ], is_post_method=True, url='reg')
+        ], id='r')
     ], False)
