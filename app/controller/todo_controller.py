@@ -24,3 +24,14 @@ def add():
 	service.create(user, text)
 	
 	return redirect('.')
+	
+@todo_bp.route('/cmp', methods=['GET'])
+@login_required
+def complete():
+	args = request.args
+	task_id = int(args['ok'])
+	user = current_user
+	
+	service.complete(task_id)
+	
+	return redirect('.')

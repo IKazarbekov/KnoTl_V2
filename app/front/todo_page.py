@@ -7,7 +7,12 @@ def get(task_ids_and_texts: list):
 	
 	page_objs = []
 	for id, text in task_ids_and_texts:
-		page_objs.append(Label(f'{id}:{text}'))
+		page_objs.append(
+			[
+				Label(f'{id}:{text} '),
+				Url('ok', f'cmp?ok={id}')
+			]
+		)
 	page_objs.append(UrlCard('Создать задачу','c'))
 	
 	page = create_page(

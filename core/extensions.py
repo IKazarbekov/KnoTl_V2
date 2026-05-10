@@ -5,6 +5,7 @@ from flask_migrate import Migrate
 class Repository:
     def __init__(self):
         self.users = None
+        self.tasks = None
 repo = Repository()
 db  = SQLAlchemy()
 login_manager = LoginManager()

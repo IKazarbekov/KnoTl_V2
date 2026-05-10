@@ -9,6 +9,8 @@ def start_menu(user_name: str, is_but_mode: bool):
             Url('Переводчик', '/old/lang'),
             Label('Новинка !'),
             Url('Задачник', '/todo'),
+            Url('История сайта', '/hist'),
+            [],
 
             Url(f'выйти', '/auth/lgt')
         ])

@@ -53,16 +53,11 @@ def create_app(config: str = 'prod') -> Flask:
     # settiong repository
     if config == 'test_sql_lite':
         with app.app_context():
-            from app.repository.user_repo import UserRepository
-            repo.users = UserRepository(db)
             from core import commands
             commands.setup_db_command()
-    elif config == 'test_mock':
-        from app.repository.mock_user_repo import UserMockRepository
-        repo.users = UserMockRepository()
-    elif config == 'prod':
-        from app.repository.user_repo import UserRepository
-        repo.users = UserRepository(db)
+    from app.repository import UserRepository, TaskRepository
+    repo.users = UserRepository(db)
+    repo.tasks = TaskRepository(db)
 
     # user loader
     @login_manager.user_loader
