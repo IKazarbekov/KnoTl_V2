@@ -10,7 +10,6 @@ for create app Flask with settings
 
 '''
 import datetime
-from sys import prefix
 
 from flask import Flask
 from flask_limiter import Limiter
@@ -27,20 +26,13 @@ def create_app(config: str = 'prod') -> Flask:
     '''
     app = Flask(__name__)
 
-    # sessings
+    # configuration
     if config == 'test_sql_lite':
         app.config['TESTING'] = True
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
-        from app.repository.user_repo import UserRepository
-        repo.users = UserRepository(db)
-    elif config == 'test_mock':
-        from app.repository.mock_user_repo import UserMockRepository
-        repo.users = UserMockRepository()
     elif config == 'prod':
         app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost:5432/mydb'
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-        from app.repository.user_repo import UserRepository
-        repo.users = UserRepository(db)
     else:
         raise ValueError('config error')
     app.config['SECRET_KEY'] = '8skwm38sf3w-3j3s8f3ok'
@@ -57,6 +49,20 @@ def create_app(config: str = 'prod') -> Flask:
     login_manager.init_app(app)
     login_manager.login_view = 'auth.root'
     migrate.init_app(app, db)
+    
+    # settiong repository
+    if config == 'test_sql_lite':
+        with app.app_context():
+            from app.repository.user_repo import UserRepository
+            repo.users = UserRepository(db)
+            from core import commands
+            commands.setup_db_command()
+    elif config == 'test_mock':
+        from app.repository.mock_user_repo import UserMockRepository
+        repo.users = UserMockRepository()
+    elif config == 'prod':
+        from app.repository.user_repo import UserRepository
+        repo.users = UserRepository(db)
 
     # user loader
     @login_manager.user_loader

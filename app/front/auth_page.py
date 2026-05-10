@@ -29,12 +29,8 @@ def get(error: str = '') -> str:
                 pb.TextBox('lg'),
                 pb.Label('Имя'),
                 pb.TextBox('nm'),
-                pb.Label('Почта'),
-                pb.TextBox('ml'),
                 pb.Label('Пароль'),
                 pb.TextBox('pw1'),
-                pb.Label('Пароль(ещё раз)'),
-                pb.TextBox('pw2'),
             ], is_post_method=True, url='reg')
         ], id='r')
     ], False)

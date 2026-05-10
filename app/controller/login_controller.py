@@ -39,7 +39,7 @@ def registered():
     login = args.get('lg')
     name = args.get('nm')
     password = args.get('pw1')
-    is_login, error, user = serv.register(login, password)
+    is_login, error, user = serv.register(login, name, password)
     login_user(user)
     return redirect(url_for('menu.root'))
 

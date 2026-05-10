@@ -1,6 +1,6 @@
 from core.extensions import repo
 from werkzeug.security import generate_password_hash, check_password_hash
-from app.model.user import User
+from app.model import User
 
 def login(login: str, password: str) -> tuple[bool, str, User]:
     '''
@@ -23,3 +23,5 @@ def register(login: str, name: str, password: str) -> tuple[bool, str, User]:
     '''
     hash_password = generate_password_hash(password)
     user = repo.users.create(login, name, hash_password)
+    
+    return True, '', user

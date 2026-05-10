@@ -7,6 +7,8 @@ def start_menu(user_name: str, is_but_mode: bool):
             Url('Общий чат', '/old/chat'),
             Url('Крестики Нолики', '/old/ttt'),
             Url('Переводчик', '/old/lang'),
+            Label('Новинка !'),
+            Url('Задачник', '/todo'),
 
             Url(f'выйти', '/auth/lgt')
         ])
