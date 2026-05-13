@@ -2,10 +2,12 @@ from .login_controller import auth_bp
 from .menu_controller import menu_bp
 from .error_controller import errors_bp
 from .todo_controller import todo_bp
+from .messenger_controller import msg_bp
 
 all_blueprint = [
     auth_bp,
     menu_bp,
     errors_bp,
-    todo_bp
+    todo_bp,
+    msg_bp
 ]

@@ -6,6 +6,7 @@ class Repository:
     def __init__(self):
         self.users = None
         self.tasks = None
+        self.chats = None
 repo = Repository()
 db  = SQLAlchemy()
 login_manager = LoginManager()

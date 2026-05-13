@@ -56,8 +56,10 @@ def create_app(config: str = 'prod') -> Flask:
             from core import commands
             commands.setup_db_command()
     from app.repository import UserRepository, TaskRepository
+    from app.repository.messenger.chat_repo import ChatRepository
     repo.users = UserRepository(db)
     repo.tasks = TaskRepository(db)
+    repo.chats = ChatRepository(db)
 
     # user loader
     @login_manager.user_loader

@@ -9,11 +9,22 @@ def setup_db_command():
     db.create_all()
     
     # Сразу используем правильный хеш, как обсуждали ранее
-    test_user = User(
+    test_first_user = User(
         name='Bob', 
         login='bob', 
         password=generate_password_hash('1234')
     )
-    
-    db.session.add(test_user)
+    test_second_user = User(
+        name='Tom',
+        login='tom',
+        password=generate_password_hash('1234')
+    )
+    test_three_user = User(
+        name='Tom',
+        login='tom',
+        password=generate_password_hash('1234')
+    )
+    db.session.add(test_first_user)
+    db.session.add(test_second_user)
+    db.session.add(test_three_user)
     db.session.commit()
