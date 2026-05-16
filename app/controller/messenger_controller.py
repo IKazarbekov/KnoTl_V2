@@ -9,6 +9,9 @@ msg_bp = Blueprint('msg', __name__, url_prefix='/msg')
 @msg_bp.route('/')
 @login_required
 def root():
+    '''
+    to show all chat
+    '''
     user = current_user
     user_id = user.id
 
@@ -21,6 +24,10 @@ def root():
 @msg_bp.route('/new', methods=['POST'])
 @login_required
 def new_chat():
+    '''
+    for create new chat
+    argument lg: the user login of the user the current one wants to write to
+    '''
     args = request.form
     user = current_user
 
@@ -31,5 +38,19 @@ def new_chat():
         second_user_id = second_user.id
 
         chat_service.create([user_id, second_user_id])
+
+    return redirect('.')
+
+@msg_bp.route('/cnt/<user_login>', methods=['POST'])
+@login_required
+def new_chat(user_login):
+    '''
+    for write message
+    atgument user_login: the user login of the user the current one wants to write to
+    '''
+    args = request.form
+    user = current_user
+
+
 
     return redirect('.')
